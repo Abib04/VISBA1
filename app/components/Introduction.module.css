@@ -90,20 +90,16 @@
     color: #fff;
 }
 
-.desktopArrow {
+.arrowIcon {
     color: var(--gold-main);
     animation: pulse 2s infinite;
-}
-
-.mobileArrow {
-    display: none;
-    color: var(--gold-main);
+    flex-shrink: 0;
 }
 
 .pillarItem {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 @keyframes pulse {
@@ -140,16 +136,11 @@
 
     .pillarItem {
         flex-direction: column;
-        gap: 0.25rem;
+        gap: 0.75rem;
     }
 
-    .desktopArrow {
-        display: none;
-    }
-
-    .mobileArrow {
-        display: block;
-        margin-top: 0.25rem;
+    .arrowIcon {
+        transform: rotate(90deg);
         animation: pulseDown 2s infinite;
     }
 }
@@ -158,16 +149,16 @@
 @keyframes pulseDown {
     0% {
         opacity: 0.6;
-        transform: translateY(0);
+        transform: rotate(90deg) translateX(0);
     }
 
     50% {
         opacity: 1;
-        transform: translateY(5px);
+        transform: rotate(90deg) translateX(5px);
     }
 
     100% {
         opacity: 0.6;
-        transform: translateY(0);
+        transform: rotate(90deg) translateX(0);
     }
 }

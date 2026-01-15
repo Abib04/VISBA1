@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './Introduction.module.css';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Introduction() {
     const [ref, inView] = useInView({
@@ -29,19 +29,19 @@ export default function Introduction() {
                         <br />
                         <div className={styles.pillarFlow}>
                             <div className={styles.pillarItem}>
-                                Analisa Data <ArrowRight size={20} className={styles.desktopArrow} />
-                                <ArrowDown size={20} className={styles.mobileArrow} />
+                                <span>Analisa Data</span>
+                                <ArrowRight size={20} className={styles.arrowIcon} />
                             </div>
                             <div className={styles.pillarItem}>
-                                Problem Solving <ArrowRight size={20} className={styles.desktopArrow} />
-                                <ArrowDown size={20} className={styles.mobileArrow} />
+                                <span>Problem Solving</span>
+                                <ArrowRight size={20} className={styles.arrowIcon} />
                             </div>
                             <div className={styles.pillarItem}>
-                                Decision Making <ArrowRight size={20} className={styles.desktopArrow} />
-                                <ArrowDown size={20} className={styles.mobileArrow} />
+                                <span>Decision Making</span>
+                                <ArrowRight size={20} className={styles.arrowIcon} />
                             </div>
                             <div className={styles.pillarItem}>
-                                Strategic Planning
+                                <span>Strategic Planning</span>
                             </div>
                         </div>
                     </div>
