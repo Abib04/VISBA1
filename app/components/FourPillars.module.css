@@ -166,6 +166,7 @@
     color: #fff;
     background: linear-gradient(135deg, #fff 0%, #e2e2e2 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -179,19 +180,74 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.25rem;
+    }
+
+    .header {
+        margin-bottom: 2.5rem;
+    }
+
+    .header h2 {
+        font-size: 1.25rem;
+    }
+
+    .header h3 {
+        font-size: 1.75rem;
+    }
+
+    .header p {
+        font-size: 1rem;
     }
 
     .pillarsContainer {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .pillarCard {
-        padding: 2rem;
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .pillarIcon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 1rem;
+    }
+
+    .pillarCard h3 {
+        font-size: 1.25rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        min-height: auto;
+        margin-bottom: 1rem;
     }
 
     .pillarNumber {
-        left: 1.5rem;
+        left: 1.25rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .bonus {
+        padding: 2rem 1.25rem;
+    }
+
+    .bonusTag {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .bonus h3 {
+        font-size: 1.5rem;
+    }
+
+    .bonus p {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 }
