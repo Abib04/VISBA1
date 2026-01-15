@@ -150,6 +150,21 @@
     }
 
     .facilitatorCard {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.25rem 4rem;
+        /* Increase bottom padding for centered badge */
+    }
+
+    .imageWrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .imageBadge {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -110px;
+        /* Adjusted for centered horizontal logo */
+        width: 280px;
     }
 }

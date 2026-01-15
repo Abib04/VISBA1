@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './Introduction.module.css';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function Introduction() {
     const [ref, inView] = useInView({
@@ -28,10 +28,21 @@ export default function Introduction() {
                         Anda akan belajar menggunakan AI untuk <span className="gradient-text">4 Pilar Kepemimpinan Eksekutif</span>:
                         <br />
                         <div className={styles.pillarFlow}>
-                            Analisa Data <ArrowRight size={20} className={styles.arrowIcon} />
-                            Problem Solving <ArrowRight size={20} className={styles.arrowIcon} />
-                            Decision Making <ArrowRight size={20} className={styles.arrowIcon} />
-                            Strategic Planning
+                            <div className={styles.pillarItem}>
+                                Analisa Data <ArrowRight size={20} className={styles.desktopArrow} />
+                                <ArrowDown size={20} className={styles.mobileArrow} />
+                            </div>
+                            <div className={styles.pillarItem}>
+                                Problem Solving <ArrowRight size={20} className={styles.desktopArrow} />
+                                <ArrowDown size={20} className={styles.mobileArrow} />
+                            </div>
+                            <div className={styles.pillarItem}>
+                                Decision Making <ArrowRight size={20} className={styles.desktopArrow} />
+                                <ArrowDown size={20} className={styles.mobileArrow} />
+                            </div>
+                            <div className={styles.pillarItem}>
+                                Strategic Planning
+                            </div>
                         </div>
                     </div>
                 </motion.div>

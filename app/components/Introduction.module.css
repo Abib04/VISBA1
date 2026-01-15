@@ -33,6 +33,7 @@
     font-weight: 800;
     background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
 }
@@ -89,9 +90,20 @@
     color: #fff;
 }
 
-.arrowIcon {
+.desktopArrow {
     color: var(--gold-main);
     animation: pulse 2s infinite;
+}
+
+.mobileArrow {
+    display: none;
+    color: var(--gold-main);
+}
+
+.pillarItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 @keyframes pulse {
@@ -122,6 +134,40 @@
 
     .pillarFlow {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.25rem;
+        align-items: center;
+    }
+
+    .pillarItem {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .desktopArrow {
+        display: none;
+    }
+
+    .mobileArrow {
+        display: block;
+        margin-top: 0.25rem;
+        animation: pulseDown 2s infinite;
+    }
+}
+
+
+@keyframes pulseDown {
+    0% {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateY(0);
     }
 }
