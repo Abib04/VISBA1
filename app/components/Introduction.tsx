@@ -33,10 +33,21 @@ export default function Introduction() {
                         Anda akan belajar menggunakan AI untuk <span className="gradient-text">4 Pilar Kepemimpinan Eksekutif</span>:
                         <br />
                         <div className={styles.pillarFlow}>
-                            Analisa Data <ArrowRight size={20} className={styles.arrowIcon} />
-                            Problem Solving <ArrowRight size={20} className={styles.arrowIcon} />
-                            Decision Making <ArrowRight size={20} className={styles.arrowIcon} />
-                            Strategic Planning
+                            <div className={styles.pillarItem}>
+                                <span>Analisa Data</span>
+                                <ArrowRight size={20} className={styles.arrowIcon} />
+                            </div>
+                            <div className={styles.pillarItem}>
+                                <span>Problem Solving</span>
+                                <ArrowRight size={20} className={styles.arrowIcon} />
+                            </div>
+                            <div className={styles.pillarItem}>
+                                <span>Decision Making</span>
+                                <ArrowRight size={20} className={styles.arrowIcon} />
+                            </div>
+                            <div className={styles.pillarItem}>
+                                <span>Strategic Planning</span>
+                            </div>
                         </div>
                     </div>
                 </motion.div>

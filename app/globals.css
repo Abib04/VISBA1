@@ -1,8 +1,8 @@
 :root {
-  /* Freddway.com Balanced Color Palette - Navy + White + Gold */
+  
   --bg-primary: #ffffff;
   --bg-secondary: #f4f6f9;
-  /* Slightly cooler grey for premium feel */
+
   --bg-navy: #1e3a5f;
   --bg-navy-dark: #0f1729;
   --bg-card: #ffffff;
@@ -114,7 +114,7 @@ p {
   color: var(--text-secondary);
 }
 
-/* Buttons */
+
 .btn {
   display: inline-block;
   padding: 0.85rem 2rem;

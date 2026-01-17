@@ -71,11 +71,23 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.25rem;
+    }
+
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
     }
 
     .grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 }

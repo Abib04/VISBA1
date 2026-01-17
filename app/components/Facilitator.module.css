@@ -146,10 +146,63 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.25rem;
+    }
+
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
     }
 
     .facilitatorCard {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.25rem 3rem;
+    }
+
+    .facilitatorImage {
+        max-height: 400px;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .credentials {
+        margin-bottom: 2rem;
+    }
+
+    .credItem span:last-child {
+        font-size: 0.9rem;
+    }
+
+    .quote {
+        padding: 1.5rem;
+    }
+
+    .quote p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .imageWrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .imageBadge {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -80px;
+        width: 240px;
     }
 }
