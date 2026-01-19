@@ -53,8 +53,9 @@ export default function PainPoints() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2>Apakah Ini Yang Anda Rasakan Setiap Hari?</h2>
-                    <p>Tantangan yang dihadapi executive modern dalam mengelola bisnis di era digital</p>
+                    <span className={styles.tagline}>WAJIB ANDA TAHU</span>
+                    <h2>Tahukah Anda Kenapa Leader Sering Merasa <span className="gradient-text">Kewalahan?</span></h2>
+                    <p>Mungkin salah satu tantangan di bawah ini sedang Anda hadapi sekarang</p>
                 </motion.div>
 
                 <div className={styles.grid}>

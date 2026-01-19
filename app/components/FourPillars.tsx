@@ -67,11 +67,12 @@ export default function FourPillars() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2>Anda akan belajar menggunakan AI untuk</h2>
-                    <h3 className="gradient-text">4 Pilar Kepemimpinan Eksekutif</h3>
+                    <span className={styles.tagline}>FITUR & VALUE YANG DIDAPAT</span>
+                    <h2>Kuasai AI untuk <span className="gradient-text">4 Pilar Kepemimpinan Eksekutif</span></h2>
                     <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
                         Analisa Data <ArrowRight size={16} /> Problem Solving <ArrowRight size={16} /> Decision Making <ArrowRight size={16} /> Strategic Planning
-                    </p>                </motion.div>
+                    </p>
+                </motion.div>
 
                 <div className={styles.pillarsContainer}>
                     {pillars.map((pillar, index) => (

@@ -27,8 +27,8 @@ export default function Gallery() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2>Dokumentasi Event Sebelumnya</h2>
-                    <p>Lihat pengalaman peserta dari workshop & training kami sebelumnya</p>
+                    <h2>Cerita Nyata dari Alumni Kami</h2>
+                    <p>Lihat pengalaman dan transformasi para leader setelah mengikuti program ini</p>
                 </motion.div>
 
                 <div className={styles.grid}>

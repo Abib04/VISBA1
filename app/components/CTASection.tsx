@@ -30,7 +30,7 @@ export default function CTASection() {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        Jika Anda Merasa <span className="gradient-text">Kewalahan</span> dengan Semua Ini...
+                        Yakin Tidak <span className="gradient-text">Mulai Sekarang?</span>
                     </motion.h2>
 
                     <motion.p
@@ -39,7 +39,7 @@ export default function CTASection() {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        Anda tidak sendirian. Ratusan executive mengalami hal yang sama.
+                        Jangan biarkan leader lain mendahului Anda dengan penguasaan AI yang lebih cepat.
                     </motion.p>
 
                     <motion.div
@@ -50,9 +50,11 @@ export default function CTASection() {
                     >
                         <button
                             className="btn btn-primary"
-                            onClick={handleCTAClick}
+                            onClick={() => {
+                                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                         >
-                            Lihat Solusinya
+                            Daftar Sekarang Juga
                             <ArrowRight className={styles.arrowIcon} />
                         </button>
                     </motion.div>
