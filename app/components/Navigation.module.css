@@ -27,29 +27,27 @@
 
 .logo {
     position: absolute;
-    left: 1rem;
+    left: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    height: 80px;
-    width: 250px;
+    height: 60px;
+    width: 60px;
     z-index: 10;
     display: flex;
     align-items: center;
-    overflow: visible;
+    justify-content: center;
 }
 
 .logoImg {
     height: 100%;
     width: auto;
     object-fit: contain;
-    transform: scale(3.2);
-    transform-origin: left center;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     transition: all 0.3s ease;
 }
 
 .scrolled .logoImg {
-    transform: scale(2.6);
+    transform: scale(0.9);
 }
 
 
@@ -153,11 +151,7 @@
 
 @media (max-width: 991px) {
     .logo {
-        width: 180px;
-    }
-
-    .logoImg {
-        transform: scale(2.2);
+        left: 1rem;
     }
 }
 
