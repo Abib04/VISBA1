@@ -159,6 +159,17 @@
     .container {
         justify-content: flex-end;
         padding: 0 1rem;
+        height: 60px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        left: 1rem;
+    }
+
+    .logoImg {
+        transform: scale(0.9);
     }
 
     .mobileMenuBtn {
