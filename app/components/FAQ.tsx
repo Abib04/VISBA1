@@ -1,36 +1,41 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useState } from 'react';
 import styles from './FAQ.module.css';
-import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
-        question: 'Apakah saya harus punya background IT?',
-        answer: 'Sama sekali TIDAK. Program ini dirancang untuk Executive dan Leader. Kami tidak mengajarkan coding. Kami mengajarkan LOGIKA dan STRATEGI penggunaan AI untuk membantu pekerjaan harian Anda.'
+        question: "Apakah saya harus punya background IT untuk ikut program ini?",
+        answer: "Tidak sama sekali. Program ini dirancang khusus untuk EXECUTIVE. Kita tidak akan belajar coding. Kita akan fokus pada bagaimana menggunakan AI (seperti ChatGPT, Claude, atau Perplexity) sebagai asisten strategis untuk berpikir, menganalisa, dan memutuskan lebih cepat."
     },
     {
-        question: 'Apakah program ini menggunakan tool berbayar?',
-        answer: 'Kami akan mendemokan penggunaan ChatGPT versi Gratis dan Berbayar. Anda bisa mulai dengan versi gratis, namun kami sangat menyarankan investasi di versi Plus untuk hasil maksimal.'
+        question: "Tool AI apa saja yang akan dipelajari?",
+        answer: "Fokus utama adalah pada Large Language Models paling canggih saat ini: ChatGPT (OpenAI), Claude (Anthropic), dan Perplexity untuk riset. Kami juga akan membocorkan beberapa tools spesifik untuk talent analytics dan data visualization yang praktis."
     },
     {
-        question: 'Apa bedanya dengan workshop AI lainnya?',
-        answer: 'Mayoritas workshop AI lain fokus pada marketing atau content creation. Kami fokus pada EXECUTIVE LEADERSHIP: Analisa Data, Problem Solving, dan Strategic Planning.'
+        question: "Apakah program ini hanya teori?",
+        answer: "100% Praktis. Anda diwajibkan membawa laptop karena 70% waktu akan digunakan untuk praktik langsung menggunakan study case nyata atau bahkan data pekerjaan Anda sendiri (dengan tetap menjaga kerahasiaan)."
     },
     {
-        question: 'Apakah ada pendampingan setelah 2 hari?',
-        answer: 'Ya! Anda akan dimasukkan ke dalam Alumni Group di mana Anda bisa bertanya dan mendapatkan update terbaru seiring dengan perkembangan teknologi AI.'
+        question: "Bagaimana jika saya merasa tidak cocok setelah ikut hari pertama?",
+        answer: "Kami memberikan Jaminan Kepuasan 100%. Jika setelah hari pertama Anda merasa program ini tidak memberikan value sesuai ekspektasi, Anda bisa meminta Full Refund tanpa pertanyaan apapun."
+    },
+    {
+        question: "Apakah ada group alumni setelah workshop?",
+        answer: "Ya, Anda akan dimasukkan ke dalam Exclusive Executive AI Circle untuk update prompt terbaru, diskusi kasus, dan networking sesama leader yang sudah mengimplementasikan AI."
     }
 ];
 
 export default function FAQ() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
     });
+
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <section className={styles.section} ref={ref} id="faq">
@@ -41,41 +46,35 @@ export default function FAQ() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2>Pertanyaan yang Sering Ditanyakan</h2>
-                    <p>Semua yang perlu Anda ketahui tentang program ini</p>
+                    <h2 className={styles.title}>Frequently Asked Questions</h2>
+                    <p className={styles.subtitle}>Segala hal yang ingin Anda ketahui tentang program ini</p>
                 </motion.div>
 
                 <div className={styles.faqList}>
                     {faqs.map((faq, index) => (
                         <motion.div
                             key={index}
-                            className={`${styles.faqItem} ${activeIndex === index ? styles.active : ''}`}
+                            className={`${styles.faqItem} ${openIndex === index ? styles.open : ''}`}
                             initial={{ opacity: 0, y: 20 }}
                             animate={inView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <button
                                 className={styles.question}
-                                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
                             >
                                 <span>{faq.question}</span>
-                                {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
+                                {openIndex === index ? <ChevronUp /> : <ChevronDown />}
                             </button>
-                            <AnimatePresence>
-                                {activeIndex === index && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: 'auto', opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className={styles.answerWrapper}
-                                    >
-                                        <div className={styles.answer}>
-                                            {faq.answer}
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
+                            {openIndex === index && (
+                                <motion.div
+                                    className={styles.answer}
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                >
+                                    <p>{faq.answer}</p>
+                                </motion.div>
+                            )}
                         </motion.div>
                     ))}
                 </div>

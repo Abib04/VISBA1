@@ -59,7 +59,7 @@ export default function FourPillars() {
     });
 
     return (
-        <section className={styles.section} ref={ref}>
+        <section className={styles.section} ref={ref} id="pillars">
             <div className="container">
                 <motion.div
                     className={styles.header}

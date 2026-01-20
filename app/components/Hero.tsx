@@ -37,7 +37,7 @@ export default function Hero() {
                     >
                         <span className={styles.rocketWrapper}>
                             <Rocket className={styles.rocketIconInner} />
-                        </span> AI Bukan Akan Gantikan Anda.
+                        </span> AI Tidak Akan Menggantikan Anda
                     </motion.h1>
 
                     <motion.h2
@@ -46,7 +46,7 @@ export default function Hero() {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        Tapi Leader yang <span className="gradient-text">Pakai AI</span> AKAN Gantikan Leader yang Tidak.
+                        Namun, Leader yang <span className="gradient-text">Menguasai AI</span> akan Menggantikan Mereka yang <span style={{ color: '#FFD700' }}>Enggan Beradaptasi</span>.
                     </motion.h2>
 
                     <motion.p
@@ -67,17 +67,11 @@ export default function Hero() {
                         <button className="btn btn-primary" onClick={() => {
                             document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
                         }}>
-                            Lihat Tantangan yang Anda Hadapi
-                        </button>
-                        <button className="btn btn-secondary" onClick={() => {
-                            document.getElementById('event-details')?.scrollIntoView({ behavior: 'smooth' });
-                        }}>
-                            Langsung ke Program
+                            Amankan Slot Anda & Mulai Bertransformasi
                         </button>
                     </motion.div>
                 </motion.div>
             </div>
-
         </section>
     );
 }

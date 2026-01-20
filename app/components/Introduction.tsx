@@ -29,26 +29,10 @@ export default function Introduction() {
                         <strong>Executive Strategic Leadership with AI</strong> adalah program praktis 2 hari yang dirancang khusus untuk <strong>EXECUTIVE</strong> yang ingin menggunakan AI sebagai <strong>ASSISTANT STRATEGIS</strong> — bukan untuk coding atau hal teknis, tapi untuk <strong>MENINGKATKAN KUALITAS KEPUTUSAN ANDA</strong> dalam waktu yang jauh lebih cepat.
                     </p>
 
-                    <div className={styles.pillarLink}>
-                        Anda akan belajar menggunakan AI untuk <span className="gradient-text">4 Pilar Kepemimpinan Eksekutif</span>:
-                        <br />
-                        <div className={styles.pillarFlow}>
-                            <div className={styles.pillarItem}>
-                                <span>Analisa Data</span>
-                                <ArrowRight size={20} className={styles.arrowIcon} />
-                            </div>
-                            <div className={styles.pillarItem}>
-                                <span>Problem Solving</span>
-                                <ArrowRight size={20} className={styles.arrowIcon} />
-                            </div>
-                            <div className={styles.pillarItem}>
-                                <span>Decision Making</span>
-                                <ArrowRight size={20} className={styles.arrowIcon} />
-                            </div>
-                            <div className={styles.pillarItem}>
-                                <span>Strategic Planning</span>
-                            </div>
-                        </div>
+                    <div className={styles.ctaWrapper}>
+                        <button className="btn btn-primary" onClick={() => document.getElementById('pillars')?.scrollIntoView({ behavior: 'smooth' })}>
+                            Pelajari 4 Pilar Strategisnya
+                        </button>
                     </div>
                 </motion.div>
             </div>

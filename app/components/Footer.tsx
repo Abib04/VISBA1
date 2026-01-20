@@ -14,7 +14,7 @@ export default function Footer() {
                         Daftar Sekarang - Hemat Rp 1.5 Juta
                     </button>
                     <p className={styles.warning}>
-                        <AlertTriangle size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'text-bottom' }} /> <strong>PERHATIAN:</strong> Kuota terbatas hanya untuk 20 peserta karena kami ingin memastikan setiap peserta mendapat perhatian maksimal dan bisa praktik langsung.
+                        <AlertTriangle size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'text-bottom' }} /> <strong>PERHATIAN:</strong> Kuota terbatas hanya untuk 30 peserta karena kami ingin memastikan setiap peserta mendapat perhatian maksimal dan bisa praktik langsung.
                         <br />Early Bird berakhir 1 Februari 2026. Setelah itu harga naik Rp 1.5 Juta.
                     </p>
                 </div>
@@ -32,15 +32,15 @@ export default function Footer() {
                             <h4>Hubungi Kami</h4>
                             <div className={styles.contactItem}>
                                 <Phone />
-                                <span>WhatsApp: [NOMOR WHATSAPP]</span>
+                                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">WhatsApp: +62 812-3456-7890</a>
                             </div>
                             <div className={styles.contactItem}>
                                 <Mail />
-                                <span>Email: [EMAIL]</span>
+                                <a href="mailto:info@freddway.com">Email: info@freddway.com</a>
                             </div>
                             <div className={styles.contactItem}>
                                 <Globe />
-                                <span>Website: [WEBSITE]</span>
+                                <a href="https://freddway.com" target="_blank" rel="noopener noreferrer">Website: freddway.com</a>
                             </div>
                         </div>
 

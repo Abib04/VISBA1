@@ -22,7 +22,7 @@ export default function Pricing() {
                 >
                     <h2>Investasi untuk Masa Depan Kepemimpinan Anda</h2>
                     <p className={styles.urgency}>
-                        <Clock size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'text-bottom' }} /> <strong>EARLY BIRD BERAKHIR 1 FEBRUARI 2026!</strong> Daftar sekarang dan hemat Rp 1.5 Juta
+                        <Clock size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'text-bottom' }} /> <strong>EARLY BIRD BERAKHIR 1 FEBRUARI 2026!</strong> Daftar sekarang dan hemat Rp 1.5 Juta. Kuota terbatas 30 peserta.
                     </p>
                 </motion.div>
 
@@ -62,7 +62,7 @@ export default function Pricing() {
                         <button className="btn btn-primary" style={{
                             width: '100%',
                             marginTop: '2rem',
-                            background: 'linear-gradient(135deg, #d4af37 0%, #c5a028 100%)',
+                            background: '#FFD700',
                             border: 'none',
                             color: '#1a1a1a',
                             fontWeight: '700'
