@@ -30,11 +30,7 @@ export default function CTASection() {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-<<<<<<< HEAD
-                        Yakin Tidak <span className="gradient-text">Mulai Sekarang?</span>
-=======
                         Jika Anda Merasa <span className="gradient-text">Kewalahan</span> dengan Semua Ini...
->>>>>>> d14c479 (Revise landing page copy, structure, and aesthetics based on feedback)
                     </motion.h2>
 
                     <motion.p
@@ -43,11 +39,7 @@ export default function CTASection() {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-<<<<<<< HEAD
-                        Jangan biarkan leader lain mendahului Anda dengan penguasaan AI yang lebih cepat.
-=======
                         Anda tidak sendirian. Ratusan executive mengalami hal yang sama.
->>>>>>> d14c479 (Revise landing page copy, structure, and aesthetics based on feedback)
                     </motion.p>
 
                     <motion.div
@@ -58,17 +50,9 @@ export default function CTASection() {
                     >
                         <button
                             className="btn btn-primary"
-<<<<<<< HEAD
-                            onClick={() => {
-                                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-                            }}
-                        >
-                            Daftar Sekarang Juga
-=======
                             onClick={handleCTAClick}
                         >
                             Saya Siap Menjadi Leader Berbasis AI
->>>>>>> d14c479 (Revise landing page copy, structure, and aesthetics based on feedback)
                             <ArrowRight className={styles.arrowIcon} />
                         </button>
                     </motion.div>
