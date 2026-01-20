@@ -19,10 +19,10 @@ export default function Home() {
       <Navigation />
       <Hero />
       <PainPoints />
+      <TargetAudience />
       <CTASection />
       <Introduction />
       <FourPillars />
-      <TargetAudience />
       <Benefits />
       <Facilitator />
       <Pricing />
