@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     title: "Executive Strategic Leadership with AI",
     description: "Program 2 Hari Intensif untuk Executive - AI untuk Analisa Data, Problem Solving, Decision Making & Strategic Planning",
     type: "website",
+  },
+  icons: {
+    icon: "/images/LOGO BUNDAR.PNG",
   }
 };
 
