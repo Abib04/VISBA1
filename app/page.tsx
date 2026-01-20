@@ -19,8 +19,8 @@ export default function Home() {
       <Navigation />
       <Hero />
       <PainPoints />
-      <TargetAudience />
       <CTASection />
+      <TargetAudience />
       <Introduction />
       <FourPillars />
       <Benefits />
