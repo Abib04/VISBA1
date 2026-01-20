@@ -3,12 +3,11 @@
 }
 
 .cta {
-    background: var(--bg-primary);
+    background: var(--gradient-navy);
     padding: 6rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .cta::before {
@@ -24,7 +23,7 @@
 .cta h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 0.5rem;
-    color: var(--navy-dark);
+    color: white;
 }
 
 .cta h3 {
@@ -49,8 +48,7 @@
 
 .footerMain {
     padding: 4rem 2rem;
-    background: var(--bg-primary);
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--bg-secondary);
 }
 
 .footerGrid {
@@ -92,7 +90,7 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 1.25rem;
-    color: var(--text-secondary);
+    color: #000000;
     font-size: 1rem;
 }
 
@@ -124,7 +122,7 @@
 }
 
 .value {
-    color: var(--text-secondary);
+    color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -137,7 +135,7 @@
     text-align: center;
     padding: 2rem;
     background: var(--bg-primary);
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-top: 2px solid var(--navy-main);
 }
 
 .copyright p {
