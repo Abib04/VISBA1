@@ -30,7 +30,7 @@ export default function Introduction() {
                     </p>
 
                     <div className={styles.ctaWrapper}>
-                        <button className="btn btn-primary" onClick={() => document.getElementById('pillars')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <button className="btn btn-primary" onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}>
                             Pelajari 4 Pilar Strategisnya
                         </button>
                     </div>

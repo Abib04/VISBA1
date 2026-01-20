@@ -12,7 +12,7 @@ export default function CTASection() {
     });
 
     const handleCTAClick = () => {
-        document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (

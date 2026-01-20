@@ -10,7 +10,9 @@ export default function Footer() {
                 <div className="container">
                     <h2>Jangan Tunda Lagi.</h2>
                     <h3>Masa Depan Kepemimpinan Anda Dimulai Hari Ini.</h3>
-                    <button className="btn btn-primary" style={{ fontSize: '1.25rem', padding: '1.25rem 3rem' }}>
+                    <button className="btn btn-primary" style={{ fontSize: '1.25rem', padding: '1.25rem 3rem' }} onClick={() => {
+                        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                    }}>
                         Daftar Sekarang - Hemat Rp 1.5 Juta
                     </button>
                     <p className={styles.warning}>

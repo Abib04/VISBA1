@@ -74,7 +74,7 @@ export default function EventDetails() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
                     <button className="btn btn-primary" onClick={() => {
-                        document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' });
+                        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
                     }}>
                         Daftar Sekarang - Hemat Rp 1.5 Juta
                     </button>

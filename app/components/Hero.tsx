@@ -65,7 +65,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                     >
                         <button className="btn btn-primary" onClick={() => {
-                            document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                            document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
                         }}>
                             Amankan Slot Anda & Mulai Bertransformasi
                         </button>
