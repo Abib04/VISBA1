@@ -162,7 +162,29 @@
         max-height: 85vh;
     }
 
+    .closeBtn {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 32px;
+        height: 32px;
+    }
+
     .header h2 {
         font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .modal {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .header h2 {
+        font-size: 1.25rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
     }
 }
