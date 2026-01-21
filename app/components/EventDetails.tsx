@@ -79,7 +79,7 @@ export default function EventDetails() {
                         Daftar Sekarang - Hemat Rp 1.5 Juta
                     </button>
                     <button className="btn btn-secondary" onClick={() => {
-                        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                        document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' });
                     }}>
                         Lihat Detail Program
                     </button>

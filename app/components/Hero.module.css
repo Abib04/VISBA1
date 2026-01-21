@@ -208,8 +208,12 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 4rem 1.25rem 2.5rem;
-        min-height: auto;
+        padding: 6rem 1.5rem 4rem;
+        min-height: 100dvh;
+        /* Full viewport height on mobile */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .mainHeading {
@@ -224,9 +228,10 @@
     }
 
     .description {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
     }
 
     .rocketWrapper {
