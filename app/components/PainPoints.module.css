@@ -1,18 +1,10 @@
 .section {
     padding: 5rem 2rem;
-    background: var(--bg-secondary);
+    background: var(--bg-navy-dark);
     position: relative;
 }
 
-.section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold-main), transparent);
-}
+/* Removed top border gradient to match hero theme */
 
 .header {
     text-align: center;
@@ -21,12 +13,12 @@
 
 .header h2 {
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: var(--text-white);
 }
 
 .header p {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--text-white-muted);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -38,14 +30,15 @@
 }
 
 .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-light);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2rem;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card::before {
@@ -85,18 +78,18 @@
 .icon {
     width: 32px;
     height: 32px;
-    color: var(--navy-main);
+    color: var(--gold-main);
 }
 
 .card h3 {
     font-size: 1.35rem;
     margin-bottom: 0.85rem;
-    color: var(--text-primary);
+    color: var(--text-white);
     font-weight: 600;
 }
 
 .card p {
-    color: var(--text-secondary);
+    color: var(--text-white-muted);
     line-height: 1.65;
     font-size: 0.95rem;
 }

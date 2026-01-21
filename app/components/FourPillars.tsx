@@ -69,9 +69,6 @@ export default function FourPillars() {
                 >
                     <span className={styles.tagline}>FITUR & VALUE YANG DIDAPAT</span>
                     <h2>Kuasai AI untuk <span className="gradient-text">4 Pilar Kepemimpinan Eksekutif</span></h2>
-                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                        Analisa Data <ArrowRight size={16} /> Problem Solving <ArrowRight size={16} /> Decision Making <ArrowRight size={16} /> Strategic Planning
-                    </p>
                 </motion.div>
 
                 <div className={styles.pillarsContainer}>
