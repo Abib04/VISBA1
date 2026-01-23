@@ -1,31 +1,33 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { landingDataRef } from '@/lib/firebase';
+import { get, set } from 'firebase/database';
 
-const dataFilePath = path.join(process.cwd(), 'app', 'data', 'landing-data.json');
+// Default data
+const defaultData = {
+    date: "24 - 25 Februari 2026",
+    time: "09:00 - 16:00 WIB",
+    location: "Hotel Grand Mercure, Kemayoran, Jakarta"
+};
 
-// GET: Read data
+// GET: Read data from Firebase
 export async function GET() {
     try {
-        if (!fs.existsSync(dataFilePath)) {
-            // Default data if file doesn't exist
-            const initialData = {
-                date: "24 - 25 Februari 2026",
-                time: "09:00 - 16:00 WIB",
-                location: "Hotel Grand Mercure, Kemayoran, Jakarta"
-            };
-            return NextResponse.json(initialData);
-        }
+        const snapshot = await get(landingDataRef);
 
-        const fileContent = fs.readFileSync(dataFilePath, 'utf-8');
-        const data = JSON.parse(fileContent);
-        return NextResponse.json(data);
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            return NextResponse.json(data);
+        } else {
+            // Return default data if nothing in database
+            return NextResponse.json(defaultData);
+        }
     } catch (error) {
+        console.error('Error reading from Firebase:', error);
         return NextResponse.json({ error: 'Failed to read data' }, { status: 500 });
     }
 }
 
-// POST: Update data
+// POST: Update data in Firebase
 export async function POST(request: Request) {
     try {
         const newData = await request.json();
@@ -35,10 +37,13 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        fs.writeFileSync(dataFilePath, JSON.stringify(newData, null, 2));
+        // Save to Firebase Realtime Database
+        await set(landingDataRef, newData);
 
         return NextResponse.json({ success: true, data: newData });
     } catch (error) {
+        console.error('Error saving to Firebase:', error);
         return NextResponse.json({ error: 'Failed to save data' }, { status: 500 });
     }
 }
+
